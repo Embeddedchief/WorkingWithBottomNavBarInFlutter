@@ -1,3 +1,5 @@
+//basic searchpage created for the app
+
 import 'package:flutter/material.dart';
 
 class SearchPage extends StatelessWidget {
@@ -5,6 +7,8 @@ class SearchPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(title: Text("Search")));
+    return Scaffold(
+      appBar: AppBar(title: Center(child: Text("Search"))),
+    );
   }
 }

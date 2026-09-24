@@ -1,3 +1,6 @@
+//basic homepage created for the app
+
+
 import 'package:flutter/material.dart';
 
 class HomeContent extends StatelessWidget {
