@@ -63,8 +63,9 @@ class _MyWidgetState extends State<HomePage> {
           });
         },
         backgroundColor: Colors.black,
-        activeColor: Colors.yellow,
+        activeColor: const Color.fromARGB(255, 255, 117, 78),
         inactiveColor: Colors.white,
+        fabColor: Colors.red,
       ),
     );
   }
