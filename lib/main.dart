@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-// import 'package:navbar_learning/profile.dart';
-// import 'package:navbar_learning/search.dart';
-// import 'package:navbar_learning/home.dart';
+import 'package:navbar_learning/profile.dart';
+import 'package:navbar_learning/search.dart';
+import 'package:navbar_learning/home.dart';
 
 void main() {
   runApp(NavigationApp());
@@ -27,28 +27,31 @@ class HomePage extends StatefulWidget {
 class _MyWidgetState extends State<HomePage> {
   int _currentIndex = 0;
 
-  // List<Widget> pages = [HomePage(), SearchPage(), ProfilePage()];
+  List<Widget> pages = [HomeContent(), SearchPage(), ProfilePage()];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // body: pages[_currentIndex],
+      body: pages[_currentIndex],
 
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home_outlined),
-            label: "Feel at home",
+            activeIcon: Icon(Icons.home),
+            label: "Home",
           ),
 
           BottomNavigationBarItem(
             icon: Icon(Icons.search_outlined),
-            label: "Look for things",
+            activeIcon: Icon(Icons.search),
+            label: "Looking",
           ),
 
           BottomNavigationBarItem(
             icon: Icon(Icons.person_outlined),
-            label: "Meet me",
+            activeIcon: Icon(Icons.person),
+            label: "Me",
           ),
         ],
 
@@ -65,30 +68,3 @@ class _MyWidgetState extends State<HomePage> {
     );
   }
 }
-
-// class HomePage extends StatelessWidget {
-//   const new({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(appBar: AppBar(title: Text("Home")));
-//   }
-// }
-
-// class ProfilePage extends StatelessWidget {
-//   const new({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(appBar: AppBar(title: Text("Profile")));
-//   }
-// }
-
-// class SearchPage extends StatelessWidget {
-//   const new({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(appBar: AppBar(title: Text("Search")));
-//   }
-// }
