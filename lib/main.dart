@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:navbar_learning/profile.dart';
 import 'package:navbar_learning/search.dart';
 import 'package:navbar_learning/home.dart';
+import 'package:curved_navigation_bar_pro/curved_navigation_bar_pro.dart';
 
 void main() {
   runApp(NavigationApp());
@@ -34,23 +35,23 @@ class _MyWidgetState extends State<HomePage> {
     return Scaffold(
       body: pages[_currentIndex],
 
-      bottomNavigationBar: BottomNavigationBar(
+      bottomNavigationBar: CurvedNavigationBarPro(
         items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home_outlined),
-            activeIcon: Icon(Icons.home),
+          CurvedNavigationItemPro(
+            inactiveIcon: Icons.home_outlined,
+            activeIcon: Icons.home_rounded,
             label: "Home",
           ),
 
-          BottomNavigationBarItem(
-            icon: Icon(Icons.search_outlined),
-            activeIcon: Icon(Icons.search),
+          CurvedNavigationItemPro(
+            inactiveIcon: Icons.search_outlined,
+            activeIcon: Icons.search_rounded,
             label: "Looking",
           ),
 
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person_outlined),
-            activeIcon: Icon(Icons.person),
+          CurvedNavigationItemPro(
+            inactiveIcon: Icons.person_outlined,
+            activeIcon: Icons.person_rounded,
             label: "Me",
           ),
         ],
@@ -62,8 +63,8 @@ class _MyWidgetState extends State<HomePage> {
           });
         },
         backgroundColor: Colors.black,
-        selectedItemColor: Colors.white,
-        unselectedItemColor: Colors.grey,
+        activeColor: Colors.yellow,
+        inactiveColor: Colors.white,
       ),
     );
   }
